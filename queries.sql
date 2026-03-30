@@ -134,3 +134,4 @@ SELECT
 FROM employee_certifications ec
 JOIN employees e ON ec.employee_id = e.employee_id
 JOIN certifications c ON ec.certification_id = c.certification_id;
+
