@@ -53,3 +53,9 @@ CREATE TABLE project_assignments (
     role            VARCHAR(100) NOT NULL,
     hours_allocated INTEGER NOT NULL CHECK (hours_allocated > 0)
 );
+
+CREATE TABLE employee_certifications (
+    id SERIAL PRIMARY KEY,
+    employee_id INTEGER REFERENCES employees(employee_id),
+    certification_id INTEGER REFERENCES certifications(certification_id),
+    certification_date DATE NOT NULL
